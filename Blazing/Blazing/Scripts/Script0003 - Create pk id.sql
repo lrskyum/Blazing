@@ -1,0 +1,1 @@
+﻿alter table zuora_access_export add constraint zuora_access_export_pk primary key using index zuora_access_export_id_idx;

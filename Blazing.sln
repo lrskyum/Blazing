@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazing", "Blazing\Blazing\Blazing.csproj", "{F7057B2B-0F4C-4E62-B4A5-D4B057C65ADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazing.Client", "Blazing\Blazing.Client\Blazing.Client.csproj", "{11609EBA-29FE-46DD-8905-5A41D0530029}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7057B2B-0F4C-4E62-B4A5-D4B057C65ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7057B2B-0F4C-4E62-B4A5-D4B057C65ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7057B2B-0F4C-4E62-B4A5-D4B057C65ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7057B2B-0F4C-4E62-B4A5-D4B057C65ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11609EBA-29FE-46DD-8905-5A41D0530029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11609EBA-29FE-46DD-8905-5A41D0530029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11609EBA-29FE-46DD-8905-5A41D0530029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11609EBA-29FE-46DD-8905-5A41D0530029}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

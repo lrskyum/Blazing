@@ -1,0 +1,32 @@
+﻿@using Havit.Blazor.Components.Web.Bootstrap
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base href="/"/>
+
+    <!-- Bootstrap CSS (you can set the Bootstrap flavor with a parameter) -->
+    @((MarkupString)HxSetup.RenderBootstrapCssReference())
+
+    <!-- Default values for additional CSS Variables (+ import Bootstrap Icons) -->
+    <link href="_content/Havit.Blazor.Components.Web.Bootstrap/defaults.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="Blazing.styles.css"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <HeadOutlet @rendermode="InteractiveAuto"/>
+</head>
+
+<!-- JavaScript Bundle with Popper -->
+@((MarkupString)HxSetup.RenderBootstrapJavaScriptReference())
+
+<body>
+<Routes/>
+<script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>

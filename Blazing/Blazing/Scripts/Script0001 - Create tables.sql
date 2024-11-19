@@ -1,0 +1,25 @@
+﻿create table zuora_access_export
+(
+    id                                bigint not null default nextval('zuora_access_export_id_seq'),
+    version                           bigint,
+    timestamp                         text,
+    account_ssoid__c                  text,
+    account_accountnumber             text,
+    account_brand__c                  text,
+    rateplancharge_accessfeature__c   text,
+    rateplancharge_name               text,
+    rateplancharge_weekdaymask__c     text,
+    rateplancharge_effectivestartdate text,
+    rateplancharge_effectiveenddate   text,
+    product_name                      text,
+    rateplan_name                     text,
+    productrateplan_id                text,
+    subscription_id                   text,
+    subscription_ordernumber__c       text,
+    subscription_status               text,
+    subscription_name                 text,
+    subscription_createddate          text,
+    rateplan_id                       text,
+    subscription_autorenew            text,
+    rateplancharge_id                 text
+);
