@@ -1,0 +1,25 @@
+﻿@page "/import"
+@using System.Diagnostics
+@using Blazing.Client.Modules.Import
+@inject IImportRestApi ImportRestApi
+
+<PageTitle>Import</PageTitle>
+
+<h1>Import</h1>
+
+<p role="status">Server Import result: @_importResult1</p>
+<p role="status">Client Import result: @_importResult2</p>
+
+<HxIcon Icon="@BootstrapIcon.HandThumbsUp" CssClass="display-3" />
+
+@code {
+    private string _importResult1 = "(empty)";
+    private string _importResult2 = "(empty)";
+
+    private async Task ImportFileAsync()
+    {
+        var sw = Stopwatch.StartNew();
+        _importResult1 = await ImportRestApi.Import().ConfigureAwait(false);
+        _importResult2 = sw.ElapsedMilliseconds.ToString() + "ms";
+    }
+}

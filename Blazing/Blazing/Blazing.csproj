@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.*" />
+        <PackageReference Include="dbup" Version="5.*" />
+        <PackageReference Include="dbup-postgresql" Version="5.*" />
+        <PackageReference Include="Npgsql" Version="8.*" />
+        <PackageReference Include="Npgsql.DependencyInjection" Version="8.*" />
+        <PackageReference Include="Testcontainers.PostgreSql" Version="3.*" />
+        <ProjectReference Include="..\Blazing.Client\Blazing.Client.csproj"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.*"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Scripts\Script0000 - Create seq id.sql" />
+      <EmbeddedResource Include="Scripts\Script0000 - Create seq id.sql" />
+      <None Remove="Scripts\Script0001 - Create tables.sql" />
+      <EmbeddedResource Include="Scripts\Script0001 - Create tables.sql" />
+      <None Remove="Scripts\Script0002 - Create idx id.sql" />
+      <EmbeddedResource Include="Scripts\Script0002 - Create idx id.sql" />
+      <None Remove="Scripts\Script0003 - Create pk id.sql" />
+      <EmbeddedResource Include="Scripts\Script0003 - Create pk id.sql" />
+      <None Remove="Scripts\Script0004 - Create idx account_create__c.sql" />
+      <EmbeddedResource Include="Scripts\Script0004 - Create idx account_create__c.sql" />
+    </ItemGroup>
+
+</Project>
