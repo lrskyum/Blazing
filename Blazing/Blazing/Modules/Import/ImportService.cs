@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text;
 using Blazing.Modules.JobQueue;
-using Npgsql;
 
 namespace Blazing.Modules.Import;
 
@@ -24,22 +23,19 @@ public class ImportService(IJobQueue jobQueue, ILogger<IImportService> logger) :
             jobQueue.Submit(line);
             if (++rows % batchSize == 0)
             {
-                logger.LogInformation("Imported rows: {Rows:N0} - elapsed: {Elapsed} - rows/s: {RowsPerMSec:N0}", rows, start.Elapsed, (rows * 1_000) / start.ElapsedMilliseconds);
+                logger.LogInformation("Imported rows: {Rows:N0} - elapsed: {Elapsed} - rows/s: {RowsPerMSec:N0}", rows,
+                    start.Elapsed, (rows * 1_000) / start.ElapsedMilliseconds);
             }
         }
 
         jobQueue.Shutdown();
-        logger.LogInformation("Imported rows: {Rows:N0} - elapsed: {Elapsed} - rows/s: {RowsPerMSec:N0}", rows, start.Elapsed, (rows * 1_000) / start.ElapsedMilliseconds);
+        logger.LogInformation("Imported rows: {Rows:N0} - elapsed: {Elapsed} - rows/s: {RowsPerMSec:N0}", rows,
+            start.Elapsed, (rows * 1_000) / start.ElapsedMilliseconds);
         return start.ElapsedMilliseconds;
     }
 
     private TextReader GetReader()
     {
-        if (false)
-        {
-            return new StreamReader(@"C:\git\BlazingCampaigns\BlazingCampaignsService\Files\RatePlanCharge.csv");
-        }
-
         if (true)
         {
             StringBuilder csv = new(2_000_000);
@@ -52,11 +48,11 @@ public class ImportService(IJobQueue jobQueue, ILogger<IImportService> logger) :
 
             return new StringReader(csv.ToString());
         }
-        
+
         return new StringReader(Csv);
     }
 
     private const string Csv = """
-                                    SsoId,AccountNumber,ProductName
-                                """;
+                                   SsoId,AccountNumber,ProductName
+                               """;
 }

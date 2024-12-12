@@ -1,1 +1,1 @@
-﻿create unique index zuora_access_export_id_idx on zuora_access_export (id);
+﻿create unique index export_import_experiment_id_idx on export_import_experiment (id);

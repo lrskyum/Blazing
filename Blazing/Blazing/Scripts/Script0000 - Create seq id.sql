@@ -1,1 +1,1 @@
-﻿create sequence zuora_access_export_id_seq start 1 increment 1;
+﻿create sequence export_import_experiment_id_seq start 1 increment 1;

@@ -1,6 +1,6 @@
-﻿create table zuora_access_export
+﻿create table export_import_experiment
 (
-    id             bigint not null default nextval('zuora_access_export_id_seq'),
+    id             bigint not null default nextval('export_import_experiment_id_seq'),
     version        bigint,
     timestamp      text,
     ssoid          text,

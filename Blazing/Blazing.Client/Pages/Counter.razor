@@ -7,12 +7,14 @@
 
 <p role="status">Current count: @currentCount</p>
 
+<HxButton Text="Button with a Spinner" Size="ButtonSize.Regular" Color="ThemeColor.Primary" OnClick="async () => await IncrementCount()" />
+
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
     private int currentCount = 0;
 
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
         currentCount++;
     }

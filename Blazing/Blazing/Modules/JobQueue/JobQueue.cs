@@ -61,7 +61,7 @@ public class JobQueue(NpgsqlDataSource connPool, ILogger<JobQueue> logger) : IJo
     private void ActionLoop(int taskNumber)
     {
         var sql = """
-                  copy zuora_access_export (
+                  copy export_import_experiment (
                       version,
                       timestamp,
                       ssoid,
