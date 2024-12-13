@@ -4,6 +4,7 @@ using Blazing.Components;
 using Blazing.Modules.Database;
 using Blazing.Modules.Import;
 using Blazing.Modules.JobQueue;
+using Blazing.Modules.NoSqlDatabase;
 using Havit.Blazor.Components.Web;
 using _Imports = Blazing.Client._Imports;
 
@@ -22,8 +23,13 @@ builder.Services.AddRazorComponents()
 builder.Services.AddHxServices();
 
 // DB
-var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;CommandTimeout=3600";
+builder.Services.AddMigratedCassandraDatabase(o =>
+{
+    o.IsTemporaryDb = tempDb;
+    o.TemporaryPort = 10042;
+});
 
+var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;CommandTimeout=3600";
 builder.Services.AddMigratedPostgresDatabase(o =>
 {
     o.IsTemporaryDb = tempDb;

@@ -7,15 +7,17 @@ namespace Blazing.Modules.Database;
 
 public static class PostgresModule
 {
-    public static IServiceCollection AddMigratedPostgresDatabase(this IServiceCollection services, Action<DatabaseOptions> optionsAction)
+    public static IServiceCollection AddMigratedPostgresDatabase(this IServiceCollection services, Action<RdbmsDatabaseOptions> optionsAction)
     {
-        var options = new DatabaseOptions();
+        var options = new RdbmsDatabaseOptions();
         optionsAction(options);
 
         if (options.IsTemporaryDb)
         {
             var postgresSqlBuilder = new PostgreSqlBuilder();
-            postgresSqlBuilder = postgresSqlBuilder.WithImage("postgres:latest");
+            postgresSqlBuilder = postgresSqlBuilder
+                .WithImage("postgres:latest")
+                .WithName("systemate-postgres");
             if (options.TemporaryPort is not null)
             {
                 postgresSqlBuilder = postgresSqlBuilder.WithPortBinding(options.TemporaryPort.Value, 5432);
@@ -32,7 +34,7 @@ public static class PostgresModule
             throw new ArgumentException("Database connection must be provided");
         }
 
-        services.TryAddSingleton(new DatabaseOptions(options));
+        services.TryAddSingleton(new RdbmsDatabaseOptions(options));
         services.AddNpgsqlDataSource(options.ConnectionString);
         EnsureDatabase.For.PostgresqlDatabase(options.ConnectionString);
 

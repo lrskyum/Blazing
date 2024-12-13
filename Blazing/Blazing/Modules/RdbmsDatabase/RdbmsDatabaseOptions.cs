@@ -1,12 +1,12 @@
 ﻿namespace Blazing.Modules.Database;
 
-public class DatabaseOptions
+public class RdbmsDatabaseOptions
 {
-    public DatabaseOptions()
+    public RdbmsDatabaseOptions()
     {
     }
 
-    public DatabaseOptions(DatabaseOptions options)
+    public RdbmsDatabaseOptions(RdbmsDatabaseOptions options)
     {
         IsTemporaryDb = options.IsTemporaryDb;
         ConnectionString = options.ConnectionString;
