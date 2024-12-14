@@ -23,7 +23,7 @@
     {
         var sw = Stopwatch.StartNew();
         _importResult1 = await ImportRestApi.Import().ConfigureAwait(false);
-        _importResult2 = sw.ElapsedMilliseconds.ToString() + "ms";
+        _importResult2 = sw.ElapsedMilliseconds + "ms";
     }
 
 }

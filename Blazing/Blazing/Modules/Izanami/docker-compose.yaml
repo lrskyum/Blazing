@@ -1,0 +1,37 @@
+﻿# Use postgres/example user/password credentials
+#version: '3.9'
+
+name: permanent-stack
+services:
+
+  db:
+    image: postgres
+    restart: always
+    container_name: postgres
+    shm_size: 128mb
+    networks:
+      - permanent-net
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+#  izanami:
+#    image: maif/izanami:2.1.0
+#    restart: always
+#    container_name: izanama
+#    networks:
+#      - permanent-net
+#    environment:
+#      FILTER_CLAIM_SHAREDKEY: asdfghjkl
+#      IZANAMI_PG_URI: postgresql://postgres:postgres@localhost:5432/postgres
+#    ports:
+#      - "9000:9000"
+#      - "8080:8080"
+
+networks:
+  permanent-net:
+    name: permanent-net
+    driver: bridge
+
