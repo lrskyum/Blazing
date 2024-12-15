@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="25.0.3">
+  <diagram name="Page-1" id="WLlfpPFSu94DFn2KgERP">
+    <mxGraphModel dx="979" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RyZrumd5OsiniHk0rNsL-8" value="SomeService" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-9" value="RefitDistApi" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-10" value="RefitRestApi" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-11" value="" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.488;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" edge="1" parent="1" source="RyZrumd5OsiniHk0rNsL-8" target="RyZrumd5OsiniHk0rNsL-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-80" y="460" as="sourcePoint" />
+            <mxPoint x="80" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-17" value="Depends: Dist Domain" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="RyZrumd5OsiniHk0rNsL-11">
+          <mxGeometry x="-0.2221" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-16" value="" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;rounded=0;exitX=0;exitY=0;exitDx=160;exitDy=47;exitPerimeter=0;entryX=0;entryY=0;entryDx=160;entryDy=47;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;fontSize=14;" edge="1" parent="1" source="RyZrumd5OsiniHk0rNsL-8" target="RyZrumd5OsiniHk0rNsL-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="352" y="190" as="sourcePoint" />
+            <mxPoint x="350" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="127" />
+              <mxPoint x="320" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-21" value="&lt;div&gt;StartUp&lt;/div&gt;&lt;div&gt;IoC Config&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="RyZrumd5OsiniHk0rNsL-16">
+          <mxGeometry x="-0.075" y="-2" relative="1" as="geometry">
+            <mxPoint x="2" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-24" value="" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.488;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="161" y="320" as="sourcePoint" />
+            <mxPoint x="159" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-25" value="HTTP Mechanics" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="RyZrumd5OsiniHk0rNsL-24">
+          <mxGeometry x="-0.2221" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-26" value="SomeService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="100" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-27" value="RefitDistApi" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="240" width="100" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-32" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="RyZrumd5OsiniHk0rNsL-27">
+          <mxGeometry x="45" y="240" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-33" value="C# request" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;strokeColor=default;strokeWidth=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;endSize=8;" edge="1" target="RyZrumd5OsiniHk0rNsL-32" parent="RyZrumd5OsiniHk0rNsL-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110.5" y="245" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-34" value="C# response" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;strokeColor=default;strokeWidth=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" edge="1" source="RyZrumd5OsiniHk0rNsL-32" parent="RyZrumd5OsiniHk0rNsL-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110.5" y="315" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-28" value="RefitRestApi" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="840" y="240" width="100" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-29" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="RyZrumd5OsiniHk0rNsL-28">
+          <mxGeometry x="45" y="80" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-30" value="AddRestApi" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;strokeColor=default;strokeWidth=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;endSize=8;" edge="1" target="RyZrumd5OsiniHk0rNsL-29" parent="1" source="RyZrumd5OsiniHk0rNsL-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655" y="325" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-35" value="Refit" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=14;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="998" y="240" width="100" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-36" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;" vertex="1" parent="RyZrumd5OsiniHk0rNsL-35">
+          <mxGeometry x="45" y="120" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-37" value="Refit" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-43" value="&lt;div&gt;Register Dist&lt;/div&gt;&lt;div&gt;interfaces&lt;br&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;strokeColor=default;strokeWidth=1;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=none;endSize=8;entryPerimeter=0;" edge="1" parent="1" source="RyZrumd5OsiniHk0rNsL-28" target="RyZrumd5OsiniHk0rNsL-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="439.5" as="sourcePoint" />
+            <mxPoint x="1090" y="439.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-41" value="" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.488;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="161" y="480" as="sourcePoint" />
+            <mxPoint x="159" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RyZrumd5OsiniHk0rNsL-42" value="&lt;div&gt;Type Safe&lt;/div&gt;&lt;div&gt;HttpClient&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="RyZrumd5OsiniHk0rNsL-41">
+          <mxGeometry x="-0.2221" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
