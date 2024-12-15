@@ -1,4 +1,4 @@
-﻿namespace Blazing.Modules.Database;
+﻿namespace Blazing.Modules.RdbmsDatabase;
 
 public class RdbmsDatabaseOptions
 {

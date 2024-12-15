@@ -1,7 +1,13 @@
 @page "/import"
+@rendermode InteractiveServer
 @using System.Diagnostics
 @using Blazing.Client.Modules.Import
-@rendermode InteractiveServer
+@using Microsoft.AspNetCore.SignalR.Client
+@implements IAsyncDisposable
+@attribute [StreamRendering]
+@inherits ComponentBase
+
+@inject NavigationManager NavigationManager
 @inject IImportRestApi ImportRestApi
 
 <PageTitle>Import</PageTitle>
@@ -10,20 +16,56 @@
 
 <p role="status">Server Import result: @_importResult1</p>
 <p role="status">Client Import result: @_importResult2</p>
+<p role="status">Imported row count: @_rows</p>
 
 <HxIcon Icon="@BootstrapIcon.HandThumbsUp" CssClass="display-3"/>
 <br/>
-<HxButton Text="Button with a Spinner" Size="ButtonSize.Regular" Color="ThemeColor.Primary" OnClick="async () => await ImportFileAsync()" />
+<HxButton Text="Import" Size="ButtonSize.Regular" Color="ThemeColor.Primary"
+          OnClick="async () => await ImportFileAsync()"
+          disabled="@(!IsConnected)"/>
 
 @code {
+    private HubConnection? _hubConnection;
     private string _importResult1 = "(empty)";
     private string _importResult2 = "(empty)";
+    private long _rows = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/counterhub"))
+            .Build();
+
+        _hubConnection.On<long>("ReceiveMessage", (rows) =>
+        {
+            _rows = rows;
+            InvokeAsync(StateHasChanged);
+        });
+
+        await _hubConnection.StartAsync();
+    }
+
+    protected void StateHasChanged()
+    {
+        base.StateHasChanged();
+    }
+
+    public bool IsConnected =>
+        _hubConnection?.State == HubConnectionState.Connected;
 
     private async Task ImportFileAsync()
     {
         var sw = Stopwatch.StartNew();
         _importResult1 = await ImportRestApi.Import().ConfigureAwait(false);
         _importResult2 = sw.ElapsedMilliseconds + "ms";
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_hubConnection is not null)
+        {
+            await _hubConnection.DisposeAsync();
+        }
     }
 
 }

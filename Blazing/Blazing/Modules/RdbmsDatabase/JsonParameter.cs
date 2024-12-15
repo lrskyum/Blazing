@@ -3,7 +3,7 @@ using Npgsql;
 using NpgsqlTypes;
 using static Dapper.SqlMapper;
 
-namespace Blazing.Modules.Database;
+namespace Blazing.Modules.RdbmsDatabase;
 
 /// <summary>
 /// Dapper does not natively support jsonb. Instead use this class to add a jsonb parameter to a query.

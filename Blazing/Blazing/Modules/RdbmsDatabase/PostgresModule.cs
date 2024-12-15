@@ -3,7 +3,7 @@ using DbUp;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Testcontainers.PostgreSql;
 
-namespace Blazing.Modules.Database;
+namespace Blazing.Modules.RdbmsDatabase;
 
 public static class PostgresModule
 {
@@ -17,7 +17,7 @@ public static class PostgresModule
             var postgresSqlBuilder = new PostgreSqlBuilder();
             postgresSqlBuilder = postgresSqlBuilder
                 .WithImage("postgres:latest")
-                .WithName("systemate-postgres");
+                .WithName("temp-postgres");
             if (options.TemporaryPort is not null)
             {
                 postgresSqlBuilder = postgresSqlBuilder.WithPortBinding(options.TemporaryPort.Value, 5432);

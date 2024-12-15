@@ -15,7 +15,7 @@ public static class CassandraModule
         {
             var cassandraBuilder = new ContainerBuilder()
                 .WithImage("cassandra:4.1.3")
-                .WithName("systemate-cassandra")
+                .WithName("temp-cassandra")
                 .WithPortBinding(9042, false)
                 .WithResourceMapping(new DirectoryInfo(@"C:\tmp\cassandra"), "/var/lib/cassandra")
                 .WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(9042));
