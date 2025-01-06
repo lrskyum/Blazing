@@ -1,0 +1,11 @@
+﻿### POST request
+POST http://{{host}}:{{port}}/api/v1/basket/create
+Content-Type: application/json
+
+{
+    "buyerName": "Lars",
+    "paymentMethod": "CREDIT_CARD",
+    "product": "AJAX"
+}
+
+###
