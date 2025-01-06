@@ -1,4 +1,4 @@
-﻿### POST request
+﻿### GET request
 GET http://{{host}}:{{port}}/api/v1/basket
 Content-Type: application/json
 
